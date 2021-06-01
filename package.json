@@ -49,13 +49,14 @@
     "build:dist": "rollup --config configs/rollup.config.js",
     "postpublish": "git tag $npm_package_version && git push origin --tags"
   },
+  "types": "src/index.d.ts",
   "jest": {
     "testRegex": "./test/unit/.*.js$",
     "testURL": "http://localhost/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dollarshaveclub/postmate.git"
+    "url": "git+https://github.com/WangLeto/postmate-n.git"
   },
   "keywords": [
     "postMessage",
@@ -69,9 +70,9 @@
   "author": "Jacob Kelley <jakie8@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dollarshaveclub/postmate/issues"
+    "url": "https://github.com/WangLeto/postmate-n/issues"
   },
-  "homepage": "https://github.com/dollarshaveclub/postmate",
+  "homepage": "https://github.com/WangLeto/postmate-n",
   "browserslist": [
     "defaults",
     "ie >= 11"

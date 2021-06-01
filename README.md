@@ -2,8 +2,9 @@
 
 ## changed
 
-- increase the max retry times of handshake from 5 to 10
-- reject the handshake Promise once handshake reached retry times
+- Increase the max retry times of handshake from 5 to 10
+- Reject the handshake Promise once handshake reached max retry times
+- Add type declaration from [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/postmate/index.d.ts)
 
 ---
 
@@ -39,11 +40,11 @@ Postmate can be installed via NPM.
 
 **NPM**
 ```bash
-$ yarn add postmate # Install via Yarn
+$ yarn add postmate-n # Install via Yarn
 ```
 
 ```bash
-$ npm i postmate --save # Install via NPM
+$ npm i postmate-n --save # Install via NPM
 ```
 
 ## Glossary
