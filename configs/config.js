@@ -1,8 +1,4 @@
 import {
-  author,
-  description,
-  homepage,
-  license,
   name,
   version,
 } from '../package.json'
@@ -16,17 +12,8 @@ const babelSetup = {
   exclude: 'node_modules/**',
 }
 
-const banner = `/**
-  ${name} - ${description}
-  @version v${version}
-  @link ${homepage}
-  @author ${author}
-  @license ${license}
-**/`
-
 export {
   babelSetup,
-  banner,
   name,
   version,
 }

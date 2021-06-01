@@ -1,7 +1,4 @@
-import {
-  babelSetup,
-  banner,
-} from '../configs/config'
+import { babelSetup } from '../configs/config'
 import babel from 'rollup-plugin-babel'
 import replace from 'rollup-plugin-replace'
 import { uglify } from 'rollup-plugin-uglify'
@@ -45,7 +42,6 @@ const createConfig = ({ output, env } = {}) => {
         {},
         format,
         {
-          banner,
           name: 'Postmate',
         }
       )

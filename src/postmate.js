@@ -9,7 +9,7 @@ export const messageType = 'application/x-postmate-v1+json'
  * The maximum number of attempts to send a handshake request to the parent
  * @type {Number}
  */
-export const maxHandshakeRequests = 5
+export const maxHandshakeRequests = 10
 
 /**
  * A unique message ID that is used to ensure responses are sent to the correct requests
@@ -326,6 +326,7 @@ class Postmate {
 
         if (attempt === maxHandshakeRequests) {
           clearInterval(responseInterval)
+          reject('Handshake failed due to timeout')
         }
       }
 

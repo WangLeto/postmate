@@ -1,15 +1,11 @@
-<a href="https://github.com/dollarshaveclub/postmate">
-  <img src="https://dollarshaveclub.github.io/postmate/assets/postmate-v3.svg">
-</a>
+# This repo is forked from [postmate](https://github.com/dollarshaveclub/postmate)
 
-> A powerful, simple, promise-based `postMessage` iFrame communication library.
+## changed
 
-[![npm][npm-image]][npm-url]
-[![CircleCI](https://circleci.com/gh/dollarshaveclub/postmate.svg?style=svg)](https://circleci.com/gh/dollarshaveclub/postmate)
-[![Share](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/home?status=Postmate%3A%20A%20powerful,%20simple,%20promise-based%20postMessage%20library%20https%3A//github.com/dollarshaveclub/postmate%20via%20%40DSCEngineering%20%40javascript)
+- increase the max retry times of handshake from 5 to 10
+- reject the handshake Promise once handshake reached retry times
 
-[npm-image]: https://badge.fury.io/js/postmate.svg
-[npm-url]: https://www.npmjs.com/package/postmate
+---
 
 _Postmate_ is a promise-based API built on `postMessage`. It allows a parent page to speak with a child `iFrame` across origins with minimal effort.
 
@@ -34,7 +30,7 @@ You can download the compiled javascript directly [here](/build/postmate.min.js)
 * Child emits events that the parent can listen to.
 * Parent can `call` functions within a `child`
 * *Zero* dependencies. Provide your own polyfill or abstraction for the `Promise` API if needed.
-* Lightweight, weighing in at ~ <span class="size">`1.6kb`</span> (minified & gzipped).
+* Lightweight, weighing in at ~ <span class="size">`1.5kb`</span> (minified & gzipped).
 
 NOTE: While the underlying mechanism is [window.postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage), only iFrame is supported.
 

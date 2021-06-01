@@ -1,11 +1,4 @@
 /**
-  postmate - A powerful, simple, promise-based postMessage library
-  @version v1.6.0
-  @link https://github.com/dollarshaveclub/postmate
-  @author Jacob Kelley <jakie8@gmail.com>
-  @license MIT
-**/
-/**
  * The type of messages our frames our sending
  * @type {String}
  */
@@ -15,7 +8,7 @@ var messageType = 'application/x-postmate-v1+json';
  * @type {Number}
  */
 
-var maxHandshakeRequests = 5;
+var maxHandshakeRequests = 10;
 /**
  * A unique message ID that is used to ensure responses are sent to the correct requests
  * @type {Number}
@@ -373,6 +366,7 @@ function () {
 
         if (attempt === maxHandshakeRequests) {
           clearInterval(responseInterval);
+          reject('Handshake failed due to timeout');
         }
       };
 
