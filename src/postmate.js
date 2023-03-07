@@ -269,6 +269,7 @@ class Postmate {
   }) { // eslint-disable-line no-undef
     this.parent = window
     this.frame = document.createElement('iframe')
+    this.frame.setAttribute('allowfullscreen', "true")
     this.frame.name = name || ''
     this.frame.classList.add.apply(this.frame.classList, classListArray)
     container.appendChild(this.frame)
